@@ -1,0 +1,35 @@
+BasedOnStyle: Google
+IndentWidth: 4
+AccessModifierOffset: -4
+ColumnLimit: 100
+AllowShortFunctionsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+InsertBraces: true
+BreakConstructorInitializers: BeforeColon
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+DerivePointerAlignment: false
+PointerAlignment: Left
+SeparateDefinitionBlocks: Always
+
+# Sort includes, import and using declarations.
+SortIncludes: true
+SortUsingDeclarations: true
+
+IncludeBlocks: Regroup
+
+IncludeIsMainSourceRegex: '$?'
+
+# Group includes, sorting lowest priority number first
+IncludeCategories:    
+  - Regex:           '^".*(/|\\).*'
+    Priority:        3
+  - Regex:           '^".*'
+    Priority:        2
+  - Regex:           '^<.*(/|\\).*'
+    Priority:        5
+  - Regex:           '^<.*'
+    Priority:        4
+
+
+IncludeIsMainRegex: '([-_](test|unittest))?$'
